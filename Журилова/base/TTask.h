@@ -11,21 +11,22 @@ class  TTask
 private:
 	int NumberProcessors;//количество процессоров
 	int Tacts;//количество тактов
-
+	int isCreate;//признак создания задачи
 public:
 	TTask()
 	{
 		NumberProcessors = 0;
 		Tacts = 0;
+		isCreate = 0;
 	}
-	TTask(int _MP, int _Tact, double _ProbabilityCreate)
+	TTask(int _MP, int _Tact)
 	{
-		srand((unsigned int)time(NULL));//инициализировали rand
-		double r = (double)(rand() % 100) / 100;//сгенерировали число типа double,отвечает за вероятность создания
-		if (r >= _ProbabilityCreate)//Если вероятность создания больше, чем запрашиваемый минимум - создаем
+		int r = 1 + rand() % 2;//сгенерировала признак создания задачи
+		isCreate = r;
+		if (isCreate == 2)//Если задача, должна быть создана
 		{
-			NumberProcessors = rand() % (_MP * 1, 3) + 1;//сгенерировали количество процессоров для задачи
-			Tacts = rand() % (_Tact * 1, 1) + 1;//сгенерировали количсетво тактов для задачи
+			NumberProcessors = rand() % (_MP)+1;//сгенерировали количество процессоров для задачи
+			Tacts = rand() % (_Tact) + 1;//сгенерировали количсетво тактов для задачи
 		}
 		else//задача "не создается"
 		{
@@ -39,6 +40,10 @@ public:
 	int GetTacts()
 	{
 		return Tacts;
+	}
+	int GetIsCreate()
+	{
+		return isCreate;
 	}
 };
 #endif

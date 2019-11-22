@@ -7,6 +7,6 @@ TEST(TTask, can_create_Task)
 }
 TEST(TTask, can_create_Task_with_characteristic)
 {
-	ASSERT_NO_THROW(TTask Que(8,10,0.5));
+	ASSERT_NO_THROW(TTask Que(8,10));
 }
 

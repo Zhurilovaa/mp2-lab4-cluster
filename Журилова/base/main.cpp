@@ -22,10 +22,8 @@ int main()
 		cout << "Введите необходимое число тактов" << endl;
 		cin >> Tacts;
 		cout << endl;
-		cout << "Введите предполагаемую вероятность появления задач от 0 до 1" << endl;
-		cin >> ProbabilityCreateTask;
 		TCluster Work;
-		Work.PreparationForWork(NumberProcessors, SizeQueue, Tacts, ProbabilityCreateTask);
+		Work.PreparationForWork(NumberProcessors, SizeQueue, Tacts);
 		Work.GetStatistics();
 		cout << "Желаете выйти из программы?" << endl;
 		cout << "Если да - 0, если нет - 1." << endl;

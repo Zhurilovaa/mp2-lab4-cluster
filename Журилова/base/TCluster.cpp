@@ -4,11 +4,10 @@
 #include <string>
 using namespace std;
 //ѕодготовка кластера к работе
-void TCluster::PreparationForWork(int _MP, int _SizeQ, int _Tacts, double _ProbabilityCreateTask)
+void TCluster::PreparationForWork(int _MP, int _SizeQ, int _Tacts)
 {
 	MicroProcessors = _MP;
 	Tacts = _Tacts;
-	ProbabilityCreateTask = 1 - _ProbabilityCreateTask;
 	NumberFreeMP = MicroProcessors;//в начале работы все свободны
 	masBusyMP = new int[MicroProcessors];//выделение пам€ти в массиве зан€тости
 	for (int i = 0; i < MicroProcessors; i++)
@@ -25,13 +24,13 @@ void TCluster::Work(TQueue<TTask>& _queue)
 {
 	for (int i = 0; i < Tacts; i++)
 	{
-		TTask task(MicroProcessors, Tacts, ProbabilityCreateTask);//—оздали задачу
-		if (task.GetNumberProcessors() != 0)//задача создалась (не пуста€)
+		TTask task(MicroProcessors, Tacts);//—оздали задачу
+		if (task.GetIsCreate() == 2)//задача создалась (не пуста€)
 		{
 			NumberTasks++;
-			if (task.GetNumberProcessors() > MicroProcessors)//задачу невозможно выполнить
+			if ((task.GetNumberProcessors() > MicroProcessors) || (_queue.Full() == true))				
 			{
-				NumberImpossibleTask++;
+				NumberImpossibleTask++;//задачу невозможно выполнить (нет процессоров или некуда положить на ожидание)
 			}
 			else
 			{

@@ -17,7 +17,6 @@ private:
 	int NumberImpossibleTask;//Количество задач, которые нельзя выполнить		
 	int BusyMPTact;//количество занятых процессоров на конкретном такте
 	int Tacts;//такты			
-	double ProbabilityCreateTask;//Вероятность создания задачи на такте, для данной работы
 public:
 
 	//Конструктор
@@ -28,7 +27,6 @@ public:
 		NumberNotCompletedTask = 0;
 		NumberImpossibleTask = 0;
 		BusyMPTact = 0;
-		ProbabilityCreateTask = 0;
 	}
 
 	//Деструктор
@@ -41,7 +39,7 @@ public:
 	}
 
 	//Подготовительные действия перед запуском кластера
-	void PreparationForWork(int _MP, int _SizeQ, int _Tacts, double _ProbabilityCreateTask);
+	void PreparationForWork(int _MP, int _SizeQ, int _Tacts);
 
 	//Работа кластера
 	void Work(TQueue<TTask>& _queue);
