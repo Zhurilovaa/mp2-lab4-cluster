@@ -82,12 +82,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Monomial.cpp" />
     <ClCompile Include="TCluster.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TCluster.h" />
-    <ClInclude Include="TQueue.h" />
-    <ClInclude Include="TTask.h" />
+    <ClInclude Include="TList.h" />
+    <ClInclude Include="Monomial.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

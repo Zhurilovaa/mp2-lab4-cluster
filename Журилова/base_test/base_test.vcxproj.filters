@@ -21,10 +21,10 @@
     <ClCompile Include="test_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test_queue.cpp">
+    <ClCompile Include="test_tlist.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test_task.cpp">
+    <ClCompile Include="test_monomial.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

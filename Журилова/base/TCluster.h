@@ -1,6 +1,6 @@
 #ifndef __TCluster_H__
 #define __TCluster_H__
-#include <string>
+/*#include <string>
 #include "TQueue.h"
 #include "TTask.h"
 
@@ -46,5 +46,5 @@ public:
 
 	//Возврат статистики
 	void GetStatistics();
-};
+};*/
 #endif

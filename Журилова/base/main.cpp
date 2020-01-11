@@ -1,33 +1,40 @@
 #include "TCluster.h"
+#include "Monomial.h"
 #include <iostream>
 #include <string>
+#define MAXsizeQ 100
+
 using namespace std;
 
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	int NumberProcessors;//Число процессоров
-	int SizeQueue;//Размер очереди
-	int Tacts;//Число тактов
-	int exit = 1;
-	double ProbabilityCreateTask;
-	while (exit != 0)
+	Monomial mon(1, 2, 3, 4);
+	Monomial m;
+	m = mon;
+	int exit;
+	if (m == mon)
 	{
-		cout << "Введите предполагаемое число процессоров" << endl;
-		cin >> NumberProcessors;
-		cout << endl;
-		cout << "Введите предполагаемый размер очереди" << endl;
-		cin >> SizeQueue;
-		cout << endl;
-		cout << "Введите необходимое число тактов" << endl;
-		cin >> Tacts;
-		cout << endl;
-		TCluster Work;
-		Work.PreparationForWork(NumberProcessors, SizeQueue, Tacts);
-		Work.GetStatistics();
-		cout << "Желаете выйти из программы?" << endl;
-		cout << "Если да - 0, если нет - 1." << endl;
-		cin >> exit;
+		cout << "круть" << endl;
 	}
-	return 0;
+	else
+	{
+		cout << "хрень какая-то" << endl;
+	}
+	cin >> exit;
+	/*int number_of_processors;
+
+	int tacts;
+
+	cout << " Enter count of processors " << endl;
+	cin >> number_of_processors;
+	cout << endl;
+
+	cout << "Enter count of tacts" << endl;
+	cin >> tacts;
+	cout << endl;
+
+	TCluster cluster;
+	cluster.PreparationForWork(number_of_processors, MAXsizeQ, tacts);
+	cluster.GetStatistics();*/
 }

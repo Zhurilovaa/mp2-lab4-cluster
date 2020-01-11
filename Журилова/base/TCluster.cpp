@@ -1,4 +1,4 @@
-#include "TCluster.h"
+/*#include "TCluster.h"
 #include <iostream>
 #include <ctime>
 #include <string>
@@ -88,5 +88,5 @@ void TCluster::GetStatistics()
 	cout << "„исло, успешно выполненных задач: " << NumberCompletedTasks << endl;
 	cout << "„исло задач, не успевшых выполнитьс€: " <<  NumberNotCompletedTask << endl;
 	cout << "„исло невозможных дл€ выполнени€ задач: " <<  NumberImpossibleTask << endl;
-	cout << "—редн€€ загруженность процессоров: " <<  BusyMPTact / Tacts + 1 << " из " << MicroProcessors << endl;
-}
+	cout << "—редн€€ загруженность процессоров: " <<  BusyMPTact / Tacts + 1 << " из " << MicroProcessors << endl;	
+}*/

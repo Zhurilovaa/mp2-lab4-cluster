@@ -21,15 +21,18 @@
     <ClCompile Include="TCluster.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Monomial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TCluster.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TQueue.h">
+    <ClInclude Include="TList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TTask.h">
+    <ClInclude Include="Monomial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
